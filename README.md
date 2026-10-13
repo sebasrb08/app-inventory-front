@@ -5,9 +5,9 @@ Aplicación móvil para **iOS y Android** construida con **React Native y Expo**
 La app consume una **API REST propia con autenticación JWT**: todos los datos (productos, categorías, clientes y ventas) se guardan en un backend remoto, por lo que la información se mantiene sincronizada entre dispositivos.
 
 <p align="center">
-<img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM" src="https://github.com/user-attachments/assets/b2824114-64ba-4795-a42a-81e39169a67f" />
-<img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (2)" src="https://github.com/user-attachments/assets/19cba7bb-1335-4411-8eb3-3fbe5f244017" />
-<img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (2)" src="https://github.com/user-attachments/assets/5d33c5f6-3971-4cc2-bd90-a609ebc9710c" />
+<img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM" src="https://github.com/user-attachments/assets/b2824114-64ba-4795-a42a-81e39169a67f" />
+<img width="220" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (2)" src="https://github.com/user-attachments/assets/19cba7bb-1335-4411-8eb3-3fbe5f244017" />
+<img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (2)" src="https://github.com/user-attachments/assets/5d33c5f6-3971-4cc2-bd90-a609ebc9710c" />
 
 </p>
 
@@ -89,21 +89,21 @@ La lógica de red está separada en la carpeta `service/`, con un archivo por re
 
 | Productos | Agregar producto | Clientes |
 |:---:|:---:|:---:|
-| <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (3)" src="https://github.com/user-attachments/assets/2ccba7e4-372c-4321-a9fc-2cfd6c8f00c3" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (4)" src="https://github.com/user-attachments/assets/77d8f24e-4a85-43ee-b42b-4dfabca5af52" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (5)" src="https://github.com/user-attachments/assets/77a706f7-6602-4fc7-996b-3f636abdfcc8" />
+| <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (3)" src="https://github.com/user-attachments/assets/2ccba7e4-372c-4321-a9fc-2cfd6c8f00c3" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (4)" src="https://github.com/user-attachments/assets/77d8f24e-4a85-43ee-b42b-4dfabca5af52" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (5)" src="https://github.com/user-attachments/assets/77a706f7-6602-4fc7-996b-3f636abdfcc8" />
  |
 
 | Agregar cliente | Escoger productos | Detalle de venta |
 |:---:|:---:|:---:|
-| <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (6)" src="https://github.com/user-attachments/assets/73d8dd18-3056-4ee9-af99-ea7ec1bbdea9" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 02 AM" src="https://github.com/user-attachments/assets/4b7e7bdb-e711-45b7-b6f1-4238226f8e69" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (1)" src="https://github.com/user-attachments/assets/ec0e5252-ef2e-4866-b00a-e857d6281801" />
+| <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (6)" src="https://github.com/user-attachments/assets/73d8dd18-3056-4ee9-af99-ea7ec1bbdea9" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 02 AM" src="https://github.com/user-attachments/assets/4b7e7bdb-e711-45b7-b6f1-4238226f8e69" />
+ | <img width="220" " alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (1)" src="https://github.com/user-attachments/assets/ec0e5252-ef2e-4866-b00a-e857d6281801" />
  |
 
 | Historial de ventas |
 |:---:|
-| <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (2)" src="https://github.com/user-attachments/assets/d0b8bda4-a11a-42be-b95e-7c934cf2b9cd" />
+| <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (2)" src="https://github.com/user-attachments/assets/d0b8bda4-a11a-42be-b95e-7c934cf2b9cd" />
  |
 
 *Capturas tomadas en un iPhone.*
