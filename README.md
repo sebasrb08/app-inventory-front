@@ -1,50 +1,135 @@
-# Welcome to your Expo app 👋
+# Inventory · App de gestión de inventario y ventas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil para **iOS y Android** construida con **React Native y Expo** que permite a un pequeño negocio gestionar su inventario de productos, su cartera de clientes y el registro de ventas desde el celular.
 
-## Get started
+La app consume una **API REST propia con autenticación JWT**: todos los datos (productos, categorías, clientes y ventas) se guardan en un backend remoto, por lo que la información se mantiene sincronizada entre dispositivos.
 
-1. Install dependencies
+<p align="center">
+  <img src="screenshots/01-login.jpg" width="200" />
+  <img src="screenshots/03-inicio.jpg" width="200" />
+  <img src="screenshots/04-productos.jpg" width="200" />
+  <img src="screenshots/09-detalle-venta.jpg" width="200" />
+</p>
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## Funcionalidades
 
-   ```bash
-    npx expo start
-   ```
+### Autenticación
+- Registro de usuarios (usuario, contraseña, nombre, apellido, email y teléfono).
+- Inicio de sesión contra la API, que devuelve un **token JWT**.
+- El token se guarda de forma segura en el dispositivo con **Expo SecureStore** (Keychain en iOS y Keystore en Android).
+- Si el token **expira**, la app lo detecta, avisa al usuario y cierra la sesión automáticamente.
+- Las rutas internas están protegidas: sin sesión válida, el usuario vuelve al login.
 
-In the output, you'll find options to open the app in a
+### Productos
+- Listado de productos con búsqueda por nombre.
+- Creación de productos con nombre, SKU, descripción, precio, cantidad y categoría.
+- **Carga de imagen** del producto desde la galería del teléfono.
+- Vista de detalle y eliminación de productos.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Categorías
+- Crear, listar, editar y eliminar categorías para organizar los productos.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Clientes
+- Listado de clientes con búsqueda.
+- Registro de clientes con nombre, apellido, email y teléfono.
+- Vista de detalle y eliminación.
 
-## Get a fresh project
+### Ventas
+- Flujo de venta paso a paso: **escoger cliente → agregar productos → revisar detalle → finalizar venta**.
+- Cálculo automático del **total** de la venta.
+- Historial de ventas con id, fecha y total.
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
+## Tecnologías
+
+| Área | Herramientas |
+|---|---|
+| Framework | React Native 0.76 (New Architecture), Expo SDK 52 |
+| Navegación | Expo Router (rutas basadas en archivos, tabs y stacks) |
+| Estado | React Context API (sesión, productos, categorías, clientes, ventas) |
+| Autenticación | JWT, `jwt-decode`, Expo SecureStore |
+| Multimedia | Expo Image Picker (subida de imágenes de productos) |
+| Backend | API REST propia desplegada en Railway, consumida con `fetch` |
+| Builds | EAS Build y EAS Update (OTA), configurados en `eas.json` |
+
+---
+
+## Estructura del proyecto
+
+```
+app/                 Pantallas y rutas (Expo Router)
+  login.js, register.js
+  (app)/(tabs)/      Tabs principales: Home, Productos, Cliente, Ventas, Sign Out
+  (app)/producto/    Agregar y detalle de producto
+  (app)/cliente/     Agregar y detalle de cliente
+  (app)/categoria/   Gestión de categorías
+  (app)/ventas/      Flujo de venta
+components/          Componentes de UI por módulo
+Contexto/            Contextos de React (estado global)
+service/             Capa de acceso a la API (un servicio por recurso)
+auth/                Validación de expiración del token
+hooks/               Hook de almacenamiento seguro (useStorageState)
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+La lógica de red está separada en la carpeta `service/`, con un archivo por recurso. Gracias a eso, cambiar el backend (por ejemplo, a otra API REST u OData) solo requiere modificar esa capa, sin tocar las pantallas.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Capturas de pantalla
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+| Login | Registro | Inicio |
+|:---:|:---:|:---:|
+| <img src="screenshots/01-login.jpg" width="220" /> | <img src="screenshots/02-registro.jpg" width="220" /> | <img src="screenshots/03-inicio.jpg" width="220" /> |
 
-## Join the community
+| Productos | Agregar producto | Clientes |
+|:---:|:---:|:---:|
+| <img src="screenshots/04-productos.jpg" width="220" /> | <img src="screenshots/05-agregar-producto.jpg" width="220" /> | <img src="screenshots/06-clientes.jpg" width="220" /> |
 
-Join our community of developers creating universal apps.
+| Agregar cliente | Escoger productos | Detalle de venta |
+|:---:|:---:|:---:|
+| <img src="screenshots/07-agregar-cliente.jpg" width="220" /> | <img src="screenshots/08-escoger-productos.jpg" width="220" /> | <img src="screenshots/09-detalle-venta.jpg" width="220" /> |
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+| Historial de ventas |
+|:---:|
+| <img src="screenshots/10-ventas.jpg" width="220" /> |
+
+*Capturas tomadas en un iPhone.*
+
+---
+
+## Instalación y ejecución
+
+**Requisitos:** Node.js 18 o superior y la app **Expo Go** en el celular (o un emulador de Android o simulador de iOS).
+
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/sebasrb08/app-inventory-front.git
+cd app-inventory-front
+
+# 2. Instalar dependencias
+npm install
+
+# 3. Iniciar el servidor de desarrollo
+npx expo start
+```
+
+Después, escanea el código QR con Expo Go (Android) o con la cámara (iOS), o presiona `a` para abrir el emulador de Android o `i` para el simulador de iOS.
+
+### Generar builds instalables
+
+```bash
+npm install -g eas-cli
+eas build --platform android --profile preview   # APK para pruebas internas
+eas build --platform ios --profile production    # Build para App Store
+eas submit --platform ios                        # Envío a App Store Connect
+```
+
+---
+
+## Autor
+
+**Sebastián Rueda**: desarrollador FileMaker y React Native.
+GitHub: [@sebasrb08](https://github.com/sebasrb08)
