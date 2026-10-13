@@ -82,9 +82,9 @@ La lógica de red está separada en la carpeta `service/`, con un archivo por re
 
 | Login | Registro | Inicio |
 |:---:|:---:|:---:|
-| <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM" src="https://github.com/user-attachments/assets/117fe0fb-afef-4742-9890-ab24843dd374" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (1)" src="https://github.com/user-attachments/assets/0b2703ef-a2c3-49ab-91c8-a552d8d9fe95" />
- | <img width="739" height="1600" alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (2)" src="https://github.com/user-attachments/assets/7ebf8e96-f916-4e0f-be59-264e789be786" />
+| <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM" src="https://github.com/user-attachments/assets/117fe0fb-afef-4742-9890-ab24843dd374" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (1)" src="https://github.com/user-attachments/assets/0b2703ef-a2c3-49ab-91c8-a552d8d9fe95" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (2)" src="https://github.com/user-attachments/assets/7ebf8e96-f916-4e0f-be59-264e789be786" />
  |
 
 | Productos | Agregar producto | Clientes |
@@ -98,7 +98,7 @@ La lógica de red está separada en la carpeta `service/`, con un archivo por re
 |:---:|:---:|:---:|
 | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 01 AM (6)" src="https://github.com/user-attachments/assets/73d8dd18-3056-4ee9-af99-ea7ec1bbdea9" />
  | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 02 AM" src="https://github.com/user-attachments/assets/4b7e7bdb-e711-45b7-b6f1-4238226f8e69" />
- | <img width="220" " alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (1)" src="https://github.com/user-attachments/assets/ec0e5252-ef2e-4866-b00a-e857d6281801" />
+ | <img width="220"  alt="WhatsApp Image 2026-10-13 at 11 59 02 AM (1)" src="https://github.com/user-attachments/assets/ec0e5252-ef2e-4866-b00a-e857d6281801" />
  |
 
 | Historial de ventas |
